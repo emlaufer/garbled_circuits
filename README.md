@@ -6,7 +6,7 @@ To run the programs, call:
 and
 `cargo run --example bob`
 
-The programs communicate over a file called "comm.txt",
+The programs communicate over a file called `comm.txt`,
 and will prompt you to indicate when certain values have
 been written.
 For example, the bob program might say "Press enter once the message \[input 0\] is written...".
@@ -16,7 +16,7 @@ Alice and Bob are implemented in `examples/alice.rs` and `examples/bob.rs`.
 To modify the bit-width of the millionaires circuit,
 change the argument in
 
-    ```let circuit = new_millionaires_circuit(2);```
+```let circuit = new_millionaires_circuit(2);```
 
 to the desired bit-width
 
@@ -29,8 +29,9 @@ This should be a bit-decomposition of the input.
 
 ## Organization
 
-`src/ot.rs` - Contains the Oblivious Transfer implementation
-`src/io.rs` - Implements the file-based communication
-`src/ops.rs` - Contains the gate op functions that are used within the circuit
-`src/lib.rs` - Contains the Garbled Circuit implementation
-
+- `examples/alice.rs` - The alice program (Garbler)
+- `examples/bob.rs` - The bob program (Evaluator)
+- `src/lib.rs` - Contains the Garbled Circuit implementation
+- `src/ot.rs` - Contains the Oblivious Transfer implementation
+- `src/io.rs` - Implements the file-based communication
+- `src/ops.rs` - Contains the gate op functions that are used within the circuit
